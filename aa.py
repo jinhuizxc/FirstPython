@@ -12,7 +12,7 @@ print("hello world")
 
 # %d对应数字; %s 对应字符串
 # 打印名片
-#1. 请使用input获取必要的信息
+# 1. 请使用input获取必要的信息
 # name = input("请输入名字：")
 # number = input("请输入QQ号:")
 # # 2. 使用print来打印名片
@@ -64,7 +64,23 @@ print("-----8-------")
 # 关键字：python一些具有特殊功能的标识符，就是所谓的关键字
 # 关键字，是python已经在使用，所以不允许开发者自己定义和关键字相同的名字的标识符
 import keyword
+
 # 打印出关键字：
 # 标识符：['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
 str = keyword.kwlist
-print("标识符：%s"%str)
+print("标识符：%s" % str)
+
+# 运算符
+a = 5
+b = 2
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)  # 商2.5
+print(a % b)  # 余1
+print("=================")
+print(2*2)
+print(2**2)  # 次方  2^16 = 65536
+print(2**3)
+print(2**4)
+print("A"*10) # 结果：AAAAAAAAAA
