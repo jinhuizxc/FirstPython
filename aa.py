@@ -84,3 +84,10 @@ print(2**2)  # 次方  2^16 = 65536
 print(2**3)
 print(2**4)
 print("A"*10) # 结果：AAAAAAAAAA
+
+# print一次输出多个变量值,除了%d,s外还有c、i、u、o等可以参考文档资料
+name = "jh"
+age = 25
+addr = "河南"
+print("姓名是：%s，年龄是：%d， 地址是：%s" %(name, age, addr))
+
