@@ -18,9 +18,14 @@ else:
 # 打印名片
 #1. 请使用input获取必要的信息
 name = input("请输入名字：")
+number = input("请输入QQ号:")
 # 2. 使用print来打印名片
 print("==========")
 print("姓名：%s"%name)
+
+# qq = int(number)
+# print("我的qq号是:%d"%qq)
+print("我的qq号是:%s"%number)
 print("==========")
 
 # 请输入QQ号
@@ -29,6 +34,15 @@ print("==========")
 # n1=input("a num:")
 # n2=int(n1)
 
-number = input("请输入QQ号:")
-qq = int(number)
-print("我的qq号是:%d"%qq)
+# python2与python3输入功能的不同：
+# python2输入：input()会执行运算：
+# 例如：
+# name = input("xxxx:")
+# 我输入1+2，那么会输出结果3，换言之如果输入名字例如：jh，则因为没有jh的定义出现错误，那么怎么办呢？
+# 采用name = raw_input()就可以了，这个方法在python3中已经弃用了，目前主推python3
+
+
+# python3的input就是输入：
+# name = input("xxxx:")
+# 我输入1+2，那么会输出结果1+2
+
