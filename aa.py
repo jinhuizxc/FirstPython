@@ -60,3 +60,11 @@ else:
     print("-----2-------")
 print("-----8-------")
 
+# 标识符由字母、下划线和数字组成，且数字不能开头
+# 关键字：python一些具有特殊功能的标识符，就是所谓的关键字
+# 关键字，是python已经在使用，所以不允许开发者自己定义和关键字相同的名字的标识符
+import keyword
+# 打印出关键字：
+# 标识符：['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+str = keyword.kwlist
+print("标识符：%s"%str)
