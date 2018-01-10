@@ -8,25 +8,21 @@ print("hello world")
 # Python的语法比较简单，采用缩进方式
 # Python使用缩进来组织代码块，请务必遵守约定俗成的习惯，坚持使用4个空格的缩进。
 # 在文本编辑器中，需要设置把Tab自动转换为4个空格，确保不混用Tab和空格。
-a = 100
-if a >= 0:
-    print(a)
-else:
-    print(-a)
+
 
 # %d对应数字; %s 对应字符串
 # 打印名片
 #1. 请使用input获取必要的信息
-name = input("请输入名字：")
-number = input("请输入QQ号:")
-# 2. 使用print来打印名片
-print("==========")
-print("姓名：%s"%name)
-
-# qq = int(number)
-# print("我的qq号是:%d"%qq)
-print("我的qq号是:%s"%number)
-print("==========")
+# name = input("请输入名字：")
+# number = input("请输入QQ号:")
+# # 2. 使用print来打印名片
+# print("==========")
+# print("姓名：%s"%name)
+#
+# # qq = int(number)
+# # print("我的qq号是:%d"%qq)
+# print("我的qq号是:%s"%number)
+# print("==========")
 
 # 请输入QQ号
 
@@ -45,4 +41,11 @@ print("==========")
 # python3的input就是输入：
 # name = input("xxxx:")
 # 我输入1+2，那么会输出结果1+2
+
+# if条件判断
+age = 16
+if age > 18:
+    print("已经成年了")
+else:
+    print("还未成年")
 
