@@ -79,17 +79,17 @@ print(a * b)
 print(a / b)  # 商2.5
 print(a % b)  # 余1
 print("=================")
-print(2*2)
-print(2**2)  # 次方  2^16 = 65536
-print(2**3)
-print(2**4)
-print("A"*10) # 结果：AAAAAAAAAA
+print(2 * 2)
+print(2 ** 2)  # 次方  2^16 = 65536
+print(2 ** 3)
+print(2 ** 4)
+print("A" * 10)  # 结果：AAAAAAAAAA
 
 # print一次输出多个变量值,除了%d,s外还有c、i、u、o等可以参考文档资料
 name = "jh"
 age = 25
 addr = "河南"
-print("姓名是：%s，年龄是：%d， 地址是：%s" %(name, age, addr))
+print("姓名是：%s，年龄是：%d， 地址是：%s" % (name, age, addr))
 
 # 比较运算符
 # >=、<=、== 、!=(<>不等于，python2里面用)
@@ -158,7 +158,7 @@ while i <= 5:
     # print("*****")
     j = 1
     while j <= 5:
-        print("*", end="") # end=""横向排列，结果：*************************
+        print("*", end="")  # end=""横向排列，结果：*************************
         j = j + 1
     print("")
     i = i + 1
@@ -170,7 +170,27 @@ while i <= 5:
     # print("*****")
     j = 1
     while j <= i:
-        print("*", end="") # end=""横向排列，结果：*************************
+        print("*", end="")  # end=""横向排列，结果：*************************
+        j = j + 1
+    print("")
+    i = i + 1
+
+# 复合赋值运算符
+# +=、-=、*=、/=、%=、**=、//=
+a = 2
+b = 4
+a += b
+print(a)
+# 打印九九乘法表, \t 制表符
+print("1 \t 2")
+i = 1
+while i <= 9:
+    # 打印的操作
+    # print("*****")
+    j = 1
+    while j <= i:
+        # print("%d*%d=%d " % (j, i, j * i), end="")
+        print("%d*%d=%d\t" % (j, i, j*i), end="")
         j = j + 1
     print("")
     i = i + 1
