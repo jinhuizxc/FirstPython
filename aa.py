@@ -91,3 +91,36 @@ age = 25
 addr = "河南"
 print("姓名是：%s，年龄是：%d， 地址是：%s" %(name, age, addr))
 
+# 比较运算符
+# >=、<=、== 、!=(<>不等于，python2里面用)
+# 或者or、并且and
+# you = input("看电影么？")
+# other = input("吃饭去？")
+# # if you == "去" or other == "去":
+# if you == "去" and other == "去":
+#     print("同时进行！")
+
+# not运算符
+a = -1
+if a > 0 and a <= 50:  # 建议：if 0 < a <= 50:
+    print("在0到50之间")
+if not (0 < a <= 50):
+    print("小于等于0，大于50")
+
+# if elif elif 条件判断
+a = 20
+if a >= 40:
+    print("大于等于40")
+elif a >= 30:
+    print("大于等于30")
+# elif a >= 20:
+else:
+    print("大于等于20")
+
+a = int(input("请输入1-2："))
+if a == 1:
+    print("是1")
+elif a == 2:
+    print("是2")
+else:
+    print("不是1、2")
