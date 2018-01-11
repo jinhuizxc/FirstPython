@@ -137,3 +137,41 @@ num = 1
 while num <= 100:
     print(num)
     num = num + 1
+# if嵌套
+# name = input("请输入用户名：")
+# password = int(input("请输入密码："))
+# if name == "name":
+#     print("用户名输入正确")
+#     if password == 123:
+#         print("密码输入正确")
+#         print("用户可以正常登录")
+#     else:
+#         print("密码输入不正确！，请再次输入")
+# else:
+#     print("用户名不对！")
+#     print("用户名输入不正确，请再次输入")
+# while嵌套
+# 打印矩形
+i = 1
+while i <= 5:
+    # 打印的操作
+    # print("*****")
+    j = 1
+    while j <= 5:
+        print("*", end="") # end=""横向排列，结果：*************************
+        j = j + 1
+    print("")
+    i = i + 1
+
+# 打印星号
+i = 1
+while i <= 5:
+    # 打印的操作
+    # print("*****")
+    j = 1
+    while j <= i:
+        print("*", end="") # end=""横向排列，结果：*************************
+        j = j + 1
+    print("")
+    i = i + 1
+
