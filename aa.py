@@ -196,13 +196,30 @@ while i <= 9:
     i = i + 1
 
 # 剪刀石头布
-import random
-player = int(input("请输入 0剪刀 1石头 2布:"))
-computer = random.randint(0, 2)
-print("电脑输出是：%d " % computer)
-if (player == 0 and computer == 2) or (player == 1 and computer == 0) or (player == 2 and computer == 1):
-    print("你赢了！")
-elif player == computer:
-    print("平局，再来！")
-else:
-    print("你输了！")
+# import random88
+# player = int(input("请输入 0剪刀 1石头 2布:"))
+# computer = random.randint(0, 2)
+# print("电脑输出是：%d " % computer)
+# if (player == 0 and computer == 2) or (player == 1 and computer == 0) or (player == 2 and computer == 1):
+#     print("你赢了！")
+# elif player == computer:
+#     print("平局，再来！")
+# else:
+#     print("你输了！")
+
+#for循环
+name = "zxcvb"
+for s in name:
+    print("###")
+    print(s)
+
+# break
+i = 1
+length = 0
+while i <= 100:
+    if i % 2 == 0:
+        print(i)
+        length = length + 1
+        if length == 20:
+            break
+    i = i + 1
