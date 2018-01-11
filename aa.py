@@ -223,3 +223,30 @@ while i <= 100:
         if length == 20:
             break
     i = i + 1
+
+# break、continue
+print("=============================")
+i = 1
+while i <= 10:
+        i = i + 1
+        print("-----")
+        if i == 3:
+            # break
+            continue # 执行到这里，后面的语句不执行，继续while循环
+        print(i)
+
+
+print("======")
+
+# while嵌套中break的作用范围
+i = 1
+while i <= 5:
+    # 打印的操作
+    # print("*****")
+    j = 1
+    while j <= i:
+        print("*", end="")
+        j = j + 1
+        break  # 结束内部while循环
+    print("")
+    i = i + 1
