@@ -116,11 +116,24 @@ elif a >= 30:
 # elif a >= 20:
 else:
     print("大于等于20")
+# 例子：
+# a = int(input("请输入1-2："))
+# if a == 1:
+#     print("是1")
+# elif a == 2:
+#     print("是2")
+# else:
+#     print("不是1、2")
 
-a = int(input("请输入1-2："))
-if a == 1:
-    print("是1")
-elif a == 2:
-    print("是2")
-else:
-    print("不是1、2")
+# while循环
+# while 条件：
+#     条件成立要做的事
+num = 1
+while num <= 10:
+    print(num)
+    num = num + 1
+# 输出1-100之间
+num = 1
+while num <= 100:
+    print(num)
+    num = num + 1
