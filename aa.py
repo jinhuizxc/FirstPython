@@ -263,3 +263,10 @@ print(c)
 # 组成字符串的2种方式
 print("===" + c + "===")
 print("===%s==="%c)
+
+# 字符串中的下标
+name = "qwer"
+print(name[2])
+print(name[-1])
+print(name[-2])
+print(name[len(name) - 1])
