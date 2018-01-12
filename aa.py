@@ -353,48 +353,57 @@ else:
     print("元素已经存在")
 
 # 名字管理系统
-print("=" * 50)
-print("名字管理系统 v1.0")
-print("1.添加一个新的名字")
-print("2.删除一个名字")
-print("3.修改一个名字")
-print("4.查询一个名字")
-print("5.退出系统")
-print("=" * 50)
+# print("=" * 50)
+# print("名字管理系统 v1.0")
+# print("1.添加一个新的名字")
+# print("2.删除一个名字")
+# print("3.修改一个名字")
+# print("4.查询一个名字")
+# print("5.退出系统")
+# print("=" * 50)
+# names = []  # 定义一个空的列表用来存储添加的名字
+# while True:
+#     # 获取用户输入
+#     num = int(input("请输入功能序号："))
+#     if num == 1:
+#         new_name = input("请输入名字：")
+#         names.append(new_name)
+#         print(names)
+#     elif num == 2:
+#         del_name = input("请输入你要删除的名字：")
+#         if del_name in names:
+#             names.remove(del_name)
+#             print("该名字已经成功删除！")
+#         else:
+#             print("查无此人！")
+#     elif num == 3:
+#         modify_name = input("请输入要修改的名字：")
+#         if modify_name in names:
+#             index = names.index(modify_name)
+#             new_modify_name = input("找到你要找的人了, 请输入新的名字：")
+#             names[index] = new_modify_name
+#             print(names)
+#         else:
+#             print("查无此人！")
+#     elif num == 4:
+#         find_name = input("请输入要查询的名字：")
+#         if find_name in names:
+#             print("找到你要找的人了!")
+#             names.index(find_name)
+#         else:
+#             print("查无此人!")
+#     elif num == 5:
+#         break
+#     else:
+#         print("您的输入有误，请重新输入")
+# print("您已经成功退出该系统，欢迎再次使用！")
 
-names = []  # 定义一个空的列表用来存储添加的名字
-while True:
-    # 获取用户输入
-    num = int(input("请输入功能序号："))
-    if num == 1:
-        new_name = input("请输入名字：")
-        names.append(new_name)
-        print(names)
-    elif num == 2:
-        del_name = input("请输入你要删除的名字：")
-        if del_name in names:
-            names.remove(del_name)
-            print("该名字已经成功删除！")
-        else:
-            print("查无此人！")
-    elif num == 3:
-        modify_name = input("请输入要修改的名字：")
-        if modify_name in names:
-            index = names.index(modify_name)
-            new_modify_name = input("找到你要找的人了, 请输入新的名字：")
-            names[index] = new_modify_name
-            print(names)
-        else:
-            print("查无此人！")
-    elif num == 4:
-        find_name = input("请输入要查询的名字：")
-        if find_name in names:
-            print("找到你要找的人了!")
-            names.index(find_name)
-        else:
-            print("查无此人!")
-    elif num == 5:
-        break
-    else:
-        print("您的输入有误，请重新输入")
-print("您已经成功退出该系统，欢迎再次使用！")
+# 字典的定义、引用
+banzhang = ["班长", "山东", 18]
+print("%s %d %s" % (banzhang[0], banzhang[2], banzhang[1]))
+# info = {键：值， 键：值}
+info = {"name": "班长", "addr": "山东", "age": 18}
+print("%s %s %d" %(info["name"], info["addr"], info["age"]))
+print("%s %d %s" %(info["addr"], info["age"], info["name"]))
+
+# 字典的增删改查
