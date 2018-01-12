@@ -4,6 +4,8 @@
 # 官方推荐写法是：# -*- coding：utf-8 -*-
 '''# coding=utf-8'''
 # 输入注释
+
+
 print("hello world")
 # Python的语法比较简单，采用缩进方式
 # Python使用缩进来组织代码块，请务必遵守约定俗成的习惯，坚持使用4个空格的缩进。
@@ -207,7 +209,7 @@ while i <= 9:
 # else:
 #     print("你输了！")
 
-#for循环
+# for循环
 name = "zxcvb"
 for s in name:
     print("###")
@@ -228,13 +230,12 @@ while i <= 100:
 print("=============================")
 i = 1
 while i <= 10:
-        i = i + 1
-        print("-----")
-        if i == 3:
-            # break
-            continue # 执行到这里，后面的语句不执行，继续while循环
-        print(i)
-
+    i = i + 1
+    print("-----")
+    if i == 3:
+        # break
+        continue  # 执行到这里，后面的语句不执行，继续while循环
+    print(i)
 
 print("======")
 
@@ -254,7 +255,7 @@ while i <= 5:
 # 字符串在内存中的存储方式
 # 1G = 1024M 1M = 1024K 1K = 1024byte(字节)最小的存储单元是字节
 name = "asdf"
-print(len(name)) # 占用4个字节
+print(len(name))  # 占用4个字节
 # 字符串的相加
 a = "aaaa"
 b = "bbbb"
@@ -262,7 +263,7 @@ c = a + b
 print(c)
 # 组成字符串的2种方式
 print("===" + c + "===")
-print("===%s==="%c)
+print("===%s===" % c)
 
 # 字符串中的下标
 name = "qwer"
@@ -276,11 +277,79 @@ name = "asdfghjkl"
 print(name[2:5])
 print(name[2:-1])
 print(name[2:])  # 冒号后不写默认取到最后一个字符
-print(name[2:-1:2]) # :2表示间隔是2
+print(name[2:-1:2])  # :2表示间隔是2
 print(name[0:])
-print(name[-1:]) # 表示从l到最后
+print(name[-1:])  # 表示从l到最后
 # 对字符串进行倒序（逆序）
 print(name[-1:0])
-print(name[-1:0:-1]) # lkjhgfds,但是没有输出a
-print(name[-1::-1]) # lkjhgfdsa,输出a
+print(name[-1:0:-1])  # lkjhgfds,但是没有输出a
+print(name[-1::-1])  # lkjhgfdsa,输出a
 print(name[::-1])
+
+# 列表引入、定义
+names = ["a", "b", "c"]
+print(names)
+# C语言中的数组 int nums[] = {1,2,3,4}
+nums = [1, 2, 3, 4]
+print(nums)
+# python 可以存储多种类型
+type = [1, 2, 3, 4, "A", "B"]
+print(type)
+
+# 列表的增删改查
+names1 = ["a", "b", "c"]
+# 添加元素：3种append、insert、extend
+# 方式一
+names1.append("d")
+print(names1)
+# name.insert（位置，要添加的内容）
+# 方式二
+names1.insert(1, "f")
+print("name1")
+print(names1)
+
+names2 = ["z", "x", "c"]
+# 2个列表的相加
+print("name1 + name2")
+print(names1 + names2)
+print("-----------")
+# 方式三
+A = [1, 2]
+B = [3, 4]
+A.extend(B)
+print(A)  # 注意; 直接写print(A.extend(B)) 输出的是None,必须是输出A才能输出
+# list1 = ['Google', 'Runoob', 'Taobao']
+# list2=list(range(5)) # 创建 0-4 的列表
+# list1.extend(list2)  # 扩展列表
+# print ("扩展后的列表：", list1)
+
+# 删除元素:3种pop、remove、del
+a = [1, 2, 3, 3, 4]
+print("pop")
+# b = a.pop() # b = 3说明a.pop()返回值是整数，而且还是最后一个元素的长度
+# print(b)  # 输出删除的最后一个元素
+# print(a.pop()) # 输出删除的元素值
+print(a)
+# print("remove")
+# a.remove(3)  # 找到删除的值，只删除一次
+# print(a)
+# print("del")
+# del a[0]
+# print(a)
+
+# 改元素
+print("修改元素")
+a[0] = 7
+print()
+# 查询元素：可以用in或者not in 判断
+print("查询元素")
+if 7 in a:
+    print("元素找到")
+else:
+    print("没找到")
+if 7 not in a:
+    print("可以添加元素")
+else:
+    print("元素已经存在")
+
+
