@@ -250,3 +250,16 @@ while i <= 5:
         break  # 结束内部while循环
     print("")
     i = i + 1
+
+# 字符串在内存中的存储方式
+# 1G = 1024M 1M = 1024K 1K = 1024byte(字节)最小的存储单元是字节
+name = "asdf"
+print(len(name)) # 占用4个字节
+# 字符串的相加
+a = "aaaa"
+b = "bbbb"
+c = a + b
+print(c)
+# 组成字符串的2种方式
+print("===" + c + "===")
+print("===%s==="%c)
