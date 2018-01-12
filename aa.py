@@ -270,3 +270,17 @@ print(name[2])
 print(name[-1])
 print(name[-2])
 print(name[len(name) - 1])
+
+# 切片、字符串逆序
+name = "asdfghjkl"
+print(name[2:5])
+print(name[2:-1])
+print(name[2:])  # 冒号后不写默认取到最后一个字符
+print(name[2:-1:2]) # :2表示间隔是2
+print(name[0:])
+print(name[-1:]) # 表示从l到最后
+# 对字符串进行倒序（逆序）
+print(name[-1:0])
+print(name[-1:0:-1]) # lkjhgfds,但是没有输出a
+print(name[-1::-1]) # lkjhgfdsa,输出a
+print(name[::-1])
