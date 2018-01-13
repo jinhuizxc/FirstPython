@@ -403,7 +403,89 @@ banzhang = ["班长", "山东", 18]
 print("%s %d %s" % (banzhang[0], banzhang[2], banzhang[1]))
 # info = {键：值， 键：值}
 info = {"name": "班长", "addr": "山东", "age": 18}
-print("%s %s %d" %(info["name"], info["addr"], info["age"]))
-print("%s %d %s" %(info["addr"], info["age"], info["name"]))
+print("%s %s %d" % (info["name"], info["addr"], info["age"]))
+print("%s %d %s" % (info["addr"], info["age"], info["name"]))
 
-# 字典的增删改查
+# 字典的增、删、改、查
+# 添加元素
+# info = {"name": "a"}
+# info["age"] = 10
+# info["QQ"] = 10086
+# 上面3行代码系统建议采用下面方式
+info = {"name": "a", "age": 10, "QQ": 10086}
+print(info)
+# 修改元素，通过key来查询
+info["QQ"] = 100000
+print(info)
+# 删除元素
+del info["QQ"]
+print(info)
+#  没有QQ时del info["QQ"] KeyError: 'QQ'
+# del info["QQ"]
+# print(info)
+# 查询元素
+print(info.get("age"))
+# 不建议用del info去查询已经删除的内容，可以用get去获取
+print(info.get("QQ"))
+
+# 补充：
+print("字典补充")
+temps = [{"name": "aa", "age": 18}, {"name": "bb", "age": 18}]
+for temp in temps:
+    # print(temp) # 输出{'name': 'aa', 'age': 18} {'name': 'bb', 'age': 18}
+    print(temp["name"])  # 输出aa bb
+
+# 名片管理系统
+print("=" * 50)
+print("名片管理系统 v1.0")
+print("1.添加一个新的片")
+print("2.删除一个名片")
+print("3.修改一个名片")
+print("4.查询一个名片")
+print("5.显示所有的名片")
+print("6.退出系统")
+print("=" * 50)
+# 定义一个字典列表
+card_info = []
+while True:
+    num = int(input("请输入功能序号："))
+    if num == 1:
+        # dasfdf
+        new_name = input("请输入新的名字：")
+        new_qq = input("请输入新的QQ：")
+        new_weixin = input("请输入新的微信：")
+        new_addr = input("请输入新的地址：")
+        new_info = {"name": new_name, "qq": new_qq, "weixin": new_weixin, "addr": new_addr}
+        card_info.append(new_info)
+        print(card_info)  # [{'name': 'jh', 'qq': '111', 'weixin': '2222', 'addr': '3333333333'}]
+    elif num == 2:
+        pass
+    elif num == 3:
+        pass
+    elif num == 4:
+        find_name = input("请输入要查找的名字：")
+        find_flag = 0 # 默认表示没有找到
+        for temp in card_info:
+            if find_name == temp["name"]:
+                print("姓名\tQQ\t微信\t住址")
+                print("%s\t%s\t%s\t%s" % (temp["name"], temp["qq"], temp["weixin"], temp["addr"]))
+                find_flag = 1# 表示找到了
+                break   # break 可以结束while循环也可以结束for循环
+            # else:
+            #     print("查无此人！")
+            #     # 输出：加上else：明明有aa，却输出查无此人！是因为遍历到bb的时候出现的！说明这样写是不对的！
+        # 判断是否找到了
+        if find_flag == 0:
+            print("查无此人！")
+    elif num == 5:
+        print("姓名\tQQ\t微信\t住址")
+        for temp in card_info:
+            # print(temp)
+            # 制表
+            print("%s\t%s\t%s\t%s" % (temp["name"], temp["qq"], temp["weixin"], temp["addr"]))
+    elif num == 6:
+        break
+    else:
+        print("您的输入有误，请重新输入")
+    print("")
+print("您已经成功退出该系统，欢迎再次使用！")
