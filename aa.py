@@ -611,10 +611,32 @@ print("                  别人笑我忒疯癫，我笑自己命太贱；  ")
 print("                  不见满街漂亮妹，哪个归得程序员？  ")
 
 
-# 函数：把一个独立的功能的代码块当作一个整体，就是一个函数
-def go():
+# 函数：把一个独立的功能的代码块当作一个整体，就是一个函数,
+# 下面的函数方法体写法符合我们看到的流程图，先判断-在结果！
+# 多个函数的定义与调用
+def print1():
     print(1)
     print("end")
 
 
-go()
+def print2():
+    print(2)
+    print("end")
+
+
+print1()
+print2()
+
+
+# 定义一个函数,带参函数
+def sum_2_sum(a, b):
+    # a = 10
+    # b = 20
+    result = a + b
+    print("%d + %d = %d" % (a, b, result))
+
+
+num1 = int(input("请输入第1个数字："))
+num2 = int(input("请输入第2个数字："))
+# 调用函数
+sum_2_sum(num1, num2)
