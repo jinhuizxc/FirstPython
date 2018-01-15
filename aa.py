@@ -545,7 +545,76 @@ print(type(nums2))  # <class 'tuple'>
 nums[0] = 100
 print(nums)
 print(nums2)
-print(nums2.count(3)) # 相同元素中个数
-print(nums2.index(3))
+print(nums2.count(4))  # 相同元素中个数
+print(nums2.index(2))  # 查找元素的第一个索引值
+
+# 字典的常见操作、遍历
+info = {"name": "as", "age": 12}
+print(info.keys())  # 输出所有的keys：dict_keys(['name', 'age'])
+print(info.values())  # 输出所有的值：dict_values(['as', 12])
+for temp in info.keys():
+    print(temp)
+for temp in info.values():
+    print(temp)
+for temp in info.items():
+    print(temp)  # 输出元组：('name', 'as') ('age', 12)
+# 通过下标取数据
+for temp in info.items():
+    # key = name, value = as key = age, value = 12
+    print("key = %s, value = %s" % (temp[0], temp[1]))
+
+# 关于items在循环时可以进行拆包分析
+for A, B in info.items():
+    print("key = %s, value = %s" % (A, B))
+
+a = (11, 22)
+b = a
+print(b)
+
+c, d = a
+print("%d,%d" % (c, d))
+
+# 函数
+# 打印佛祖 鼠标左键选中，
+# 光标在当前要选中的位置（或者先选中一个单词）再按Alt+J，即可选中下一个同样的单词。
+# Pycharm在Edit->Find中有提示.
+
+print("                            _ooOoo_  ")
+print("                           o8888888o  ")
+print("                           88  .  88  ")
+print("                           (| -_- |)  ")
+print("                            O\\ = /O  ")
+print("                        ____/`---'\\____  ")
+print("                      .   ' \\| |// `.  ")
+print("                       / \\||| : |||// \\  ")
+print("                     / _||||| -:- |||||- \\  ")
+print("                       | | \\\\\\ - /// | |  ")
+print("                     | \\_| ''\\---/'' | |  ")
+print("                      \\ .-\\__ `-` ___/-. /  ")
+print("                   ___`. .' /--.--\\ `. . __  ")
+print("                ."" '< `.___\\_<|>_/___.' >'"".  ")
+print("               | | : `- \\`.;`\\ _ /`;.`/ - ` : | |  ")
+print("                 \\ \\ `-. \\_ __\\ /__ _/ .-` / /  ")
+print("         ======`-.____`-.___\\_____/___.-`____.-'======  ")
+print("                            `=---='  ")
+print("  ")
+print("         .............................................  ")
+print("                  佛祖镇楼                  BUG辟易  ")
+print("          佛曰:  ")
+print("                  写字楼里写字间，写字间里程序员；  ")
+print("                  程序人员写程序，又拿程序换酒钱。  ")
+print("                  酒醒只在网上坐，酒醉还来网下眠；  ")
+print("                  酒醉酒醒日复日，网上网下年复年。  ")
+print("                  但愿老死电脑间，不愿鞠躬老板前；  ")
+print("                  奔驰宝马贵者趣，公交自行程序员。  ")
+print("                  别人笑我忒疯癫，我笑自己命太贱；  ")
+print("                  不见满街漂亮妹，哪个归得程序员？  ")
 
 
+# 函数：把一个独立的功能的代码块当作一个整体，就是一个函数
+def go():
+    print(1)
+    print("end")
+
+
+go()
