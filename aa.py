@@ -501,3 +501,19 @@ while i < nums_length:
 # 用for循环更简单来遍历
 for num in nums:
     print(num)
+
+# for-else的应用
+# 列表有内容还是没有内容，else语句都执行，如果加了break在for语句中会退出整个for-else语句
+# 关于这个方法：
+# 可以用在上面的名片管理系统序号等于4的地方：
+# 加了break就是找了，输出：找到！没找到就是else:没找到，要会灵活运用！
+nums = [1, 2, 3, 4]
+find_num = int(input("输入你要找的数字："))
+# nums = []
+for num in nums:
+    # print(num)
+    if num == find_num:
+        print("找到了！")
+        break
+else:
+    print("没找到！")
