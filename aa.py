@@ -710,42 +710,64 @@ def print_5_line():
 
 print_5_line()
 
-
 # 函数的嵌套的应用-计算3个数的和,并求平均值
-def sum_3_sums(a, b, c):
-    result = a + b + c
-    # print("%d + %d + %d = %d" % (a, b, c, result))
-    return result
+# def sum_3_sums(a, b, c):
+#     result = a + b + c
+#     # print("%d + %d + %d = %d" % (a, b, c, result))
+#     return result
+#
+#
+# def average_3_nums1(a, b, c):
+#     result = sum_3_sums(a, b, c)
+#     result = result / 3
+#     print("平均值是：%d" % result)
+#     return result
+#
+#
+# def average_3_nums2(a, b, c):
+#     result = sum_3_sums(a, b, c)
+#     result = result / 3
+#     print("平均值是：%d" % result)
+#     return result
+#
+#
+# def sum_2_avarage(a, b):
+#     sum = a + b
+#     print("得到2个平均值的和是%d" % sum)
+#
+#
+# # 获取3个数
+# num1 = int(input("第1个值："))
+# num2 = int(input("第2个值："))
+# num3 = int(input("第3个值："))
+# num4 = int(input("第4个值："))
+# num5 = int(input("第5个值："))
+# num6 = int(input("第6个值："))
+#
+# # sum_3_sums(num1, num2, num3)
+# sum1 = average_3_nums1(num1, num2, num3)
+# sum2 = average_3_nums2(num4, num5, num6)
+# sum_2_avarage(sum1, sum2)
 
 
-def average_3_nums1(a, b, c):
-    result = sum_3_sums(a, b, c)
-    result = result / 3
-    print("平均值是：%d" % result)
-    return result
+# 局部变量、全局变量
+print("局部变量/全局变量")
+a = 100
 
 
-def average_3_nums2(a, b, c):
-    result = sum_3_sums(a, b, c)
-    result = result / 3
-    print("平均值是：%d" % result)
-    return result
+def test1():
+    # 局部变量
+    a = 100
+    print("a = %d" % a)
 
 
-def sum_2_avarage(a, b):
-    sum = a + b
-    print("得到2个平均值的和是%d" % sum)
+# 出错：TypeError: not all arguments converted during string formatting
+def test2():
+    a = 50
+    print("a = %d" % a)
 
 
-# 获取3个数
-num1 = int(input("第1个值："))
-num2 = int(input("第2个值："))
-num3 = int(input("第3个值："))
-num4 = int(input("第4个值："))
-num5 = int(input("第5个值："))
-num6 = int(input("第6个值："))
-
-# sum_3_sums(num1, num2, num3)
-sum1 = average_3_nums1(num1, num2, num3)
-sum2 = average_3_nums2(num4, num5, num6)
-sum_2_avarage(sum1, sum2)
+test1()
+test2()
+# TypeError: not all arguments converted during string formatting
+print("a = %d" % a)
