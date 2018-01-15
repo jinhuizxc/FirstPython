@@ -317,7 +317,9 @@ print("-----------")
 A = [1, 2]
 B = [3, 4]
 A.extend(B)
-print(A)  # 注意; 直接写print(A.extend(B)) 输出的是None,必须是输出A才能输出
+# 注意; 直接写print(A.extend(B)) 输出的是None, 必须是输出A才能输出,
+# 为什么？因为A.extend(B)只是一个执行将内容加载进A里了，但不是输出所以为None，输出最终的A就好，这点不要与所谓的引用对象混淆！
+print(A)
 # list1 = ['Google', 'Runoob', 'Taobao']
 # list2=list(range(5)) # 创建 0-4 的列表
 # list1.extend(list2)  # 扩展列表
@@ -507,13 +509,26 @@ for num in nums:
 # 关于这个方法：
 # 可以用在上面的名片管理系统序号等于4的地方：
 # 加了break就是找了，输出：找到！没找到就是else:没找到，要会灵活运用！
-nums = [1, 2, 3, 4]
-find_num = int(input("输入你要找的数字："))
-# nums = []
-for num in nums:
-    # print(num)
-    if num == find_num:
-        print("找到了！")
-        break
-else:
-    print("没找到！")
+# nums = [1, 2, 3, 4]
+# find_num = int(input("输入你要找的数字："))
+# # nums = []
+# for num in nums:
+#     # print(num)
+#     if num == find_num:
+#         print("找到了！")
+#         break
+# else:
+#     print("没找到！")
+
+# 列表的append与extend
+a = [1, 2, 3]
+b = ["a", "b"]
+# a.extend(b)  # 输出：[1, 2, 3, 2, 3]
+a.append(b)  # 输出：[1, 2, 3, [2, 3]]
+print(a)
+
+# 列表append的注意项
+a = [1, 2, 3]
+b = ["a", "b"]
+a = a.append(b)
+print(a)  # 输出None 要注意
