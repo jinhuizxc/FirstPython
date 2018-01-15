@@ -436,56 +436,68 @@ for temp in temps:
     print(temp["name"])  # 输出aa bb
 
 # 名片管理系统
-print("=" * 50)
-print("名片管理系统 v1.0")
-print("1.添加一个新的片")
-print("2.删除一个名片")
-print("3.修改一个名片")
-print("4.查询一个名片")
-print("5.显示所有的名片")
-print("6.退出系统")
-print("=" * 50)
-# 定义一个字典列表
-card_info = []
-while True:
-    num = int(input("请输入功能序号："))
-    if num == 1:
-        # dasfdf
-        new_name = input("请输入新的名字：")
-        new_qq = input("请输入新的QQ：")
-        new_weixin = input("请输入新的微信：")
-        new_addr = input("请输入新的地址：")
-        new_info = {"name": new_name, "qq": new_qq, "weixin": new_weixin, "addr": new_addr}
-        card_info.append(new_info)
-        print(card_info)  # [{'name': 'jh', 'qq': '111', 'weixin': '2222', 'addr': '3333333333'}]
-    elif num == 2:
-        pass
-    elif num == 3:
-        pass
-    elif num == 4:
-        find_name = input("请输入要查找的名字：")
-        find_flag = 0 # 默认表示没有找到
-        for temp in card_info:
-            if find_name == temp["name"]:
-                print("姓名\tQQ\t微信\t住址")
-                print("%s\t%s\t%s\t%s" % (temp["name"], temp["qq"], temp["weixin"], temp["addr"]))
-                find_flag = 1# 表示找到了
-                break   # break 可以结束while循环也可以结束for循环
-            # else:
-            #     print("查无此人！")
-            #     # 输出：加上else：明明有aa，却输出查无此人！是因为遍历到bb的时候出现的！说明这样写是不对的！
-        # 判断是否找到了
-        if find_flag == 0:
-            print("查无此人！")
-    elif num == 5:
-        print("姓名\tQQ\t微信\t住址")
-        for temp in card_info:
-            # print(temp)
-            # 制表
-            print("%s\t%s\t%s\t%s" % (temp["name"], temp["qq"], temp["weixin"], temp["addr"]))
-    elif num == 6:
-        break
-    else:
-        print("您的输入有误，请重新输入")
-    print("")
-print("您已经成功退出该系统，欢迎再次使用！")
+# print("=" * 50)
+# print("名片管理系统 v1.0")
+# print("1.添加一个新的片")
+# print("2.删除一个名片")
+# print("3.修改一个名片")
+# print("4.查询一个名片")
+# print("5.显示所有的名片")
+# print("6.退出系统")
+# print("=" * 50)
+# # 定义一个字典列表
+# card_info = []
+# while True:
+#     num = int(input("请输入功能序号："))
+#     if num == 1:
+#         # dasfdf
+#         new_name = input("请输入新的名字：")
+#         new_qq = input("请输入新的QQ：")
+#         new_weixin = input("请输入新的微信：")
+#         new_addr = input("请输入新的地址：")
+#         new_info = {"name": new_name, "qq": new_qq, "weixin": new_weixin, "addr": new_addr}
+#         card_info.append(new_info)
+#         print(card_info)  # [{'name': 'jh', 'qq': '111', 'weixin': '2222', 'addr': '3333333333'}]
+#     elif num == 2:
+#         pass
+#     elif num == 3:
+#         pass
+#     elif num == 4:
+#         find_name = input("请输入要查找的名字：")
+#         find_flag = 0  # 默认表示没有找到
+#         for temp in card_info:
+#             if find_name == temp["name"]:
+#                 print("姓名\tQQ\t微信\t住址")
+#                 print("%s\t%s\t%s\t%s" % (temp["name"], temp["qq"], temp["weixin"], temp["addr"]))
+#                 find_flag = 1  # 表示找到了
+#                 break  # break 可以结束while循环也可以结束for循环
+#             # else:
+#             #     print("查无此人！")
+#             #     # 输出：加上else：明明有aa，却输出查无此人！是因为遍历到bb的时候出现的！说明这样写是不对的！
+#         # 判断是否找到了
+#         if find_flag == 0:
+#             print("查无此人！")
+#     elif num == 5:
+#         print("姓名\tQQ\t微信\t住址")
+#         for temp in card_info:
+#             # print(temp)
+#             # 制表
+#             print("%s\t%s\t%s\t%s" % (temp["name"], temp["qq"], temp["weixin"], temp["addr"]))
+#     elif num == 6:
+#         break
+#     else:
+#         print("您的输入有误，请重新输入")
+#     print("")
+# print("您已经成功退出该系统，欢迎再次使用！")
+
+# while、 for循环遍历列表,
+nums = [11, 22, 33, 44, 55]
+# 用len得到列表长度！
+nums_length = len(nums)
+i = 0
+while i < nums_length:
+    print(nums[i])
+    i = i + 1
+# 用for循环更简单来遍历
+for num in nums:
+    print(num)
