@@ -629,14 +629,30 @@ print2()
 
 
 # 定义一个函数,带参函数
-def sum_2_sum(a, b):
-    # a = 10
-    # b = 20
-    result = a + b
-    print("%d + %d = %d" % (a, b, result))
+# def sum_2_sum(a, b):
+#     # a = 10
+#     # b = 20
+#     result = a + b
+#     print("%d + %d = %d" % (a, b, result))
+#
+#
+# num1 = int(input("请输入第1个数字："))
+# num2 = int(input("请输入第2个数字："))
+# # 调用函数
+# sum_2_sum(num1, num2)
 
 
-num1 = int(input("请输入第1个数字："))
-num2 = int(input("请输入第2个数字："))
-# 调用函数
-sum_2_sum(num1, num2)
+# return的作用：
+def get_wendu():
+    wendu = 22
+    print("当前温度是%d" % wendu)
+    return wendu
+
+
+def get_wendu_huashi(result):
+    result = result + 3
+    print("得到的结果是%d" % result)
+
+
+result = get_wendu()
+get_wendu_huashi(result)
