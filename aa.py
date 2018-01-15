@@ -656,3 +656,40 @@ def get_wendu_huashi(result):
 
 result = get_wendu()
 get_wendu_huashi(result)
+
+
+def test():
+    a = 11
+    b = 22
+    c = 33
+    # 第1种方式用列表来封装3个变量的值
+    # d = [a, b, c]
+    # return d
+    # 第二种
+    # return [a, b, c]
+    # 第三种
+    # return (a, b, c)
+    return a, b, c
+
+
+result = test()
+print(result)
+
+
+# 函数的嵌套调用
+def test():
+    print("as")
+
+
+def test2():
+    print("2.1")
+    print("2.2")
+
+
+def test3():
+    print("3.1")
+    test2()
+    print("3.2")
+
+
+test3()
