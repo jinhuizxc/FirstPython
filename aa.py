@@ -293,8 +293,8 @@ print(names)
 nums = [1, 2, 3, 4]
 print(nums)
 # python 可以存储多种类型
-type = [1, 2, 3, 4, "A", "B"]
-print(type)
+type1 = [1, 2, 3, 4, "A", "B"]
+print(type1)
 
 # 列表的增删改查
 names1 = ["a", "b", "c"]
@@ -532,3 +532,20 @@ a = [1, 2, 3]
 b = ["a", "b"]
 a = a.append(b)
 print(a)  # 输出None 要注意
+
+# 元组tuple
+# 元祖和列表十分相似，
+# 不过元组是不可变的。即你不能修改元组。
+# 元组通过圆括号中用逗号分隔的项目定义。
+# 元组通常用在使语句或用户定义的函数能够安全的采用一组值的时候，即被使用的元组的值不会改变。元组可以嵌套。
+nums = [11, 22, 33]
+print(type(nums))  # <class 'list'>
+nums2 = (1, 2, 3, 3, 4)
+print(type(nums2))  # <class 'tuple'>
+nums[0] = 100
+print(nums)
+print(nums2)
+print(nums2.count(3)) # 相同元素中个数
+print(nums2.index(3))
+
+
