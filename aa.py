@@ -771,3 +771,37 @@ test1()
 test2()
 # TypeError: not all arguments converted during string formatting
 print("a = %d" % a)
+
+# 局部变量、全局变量的区别
+# 下面是2个例子：
+def get_wendu():
+    wendu = 33
+    return wendu
+
+
+def print_wendu(wendu):
+    print("温度是%d" % wendu)  # 输出：温度是33
+
+
+result = get_wendu()
+print_wendu(result)
+
+# 定义一个全局变量
+wendu = 0
+
+# global的用法
+def get_wendu():
+    # 使用global用来对一个全局变量的声明，
+    # 那么这个函数中的wendu=33就不是定义一个局部变量，而是对全局变量进行修改
+    global wendu
+    wendu = 33
+
+
+def print_wendu():
+    global wendu
+    wendu = -1
+    print("温度是%d" % wendu)  # 输出：温度是33
+
+
+get_wendu()
+print_wendu()
