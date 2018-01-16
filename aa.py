@@ -823,86 +823,101 @@ test()
 # ab = 300
 
 # 名片管理系统函数版
-# 用来存储名片
-card_info = []
+# # 用来存储名片
+# card_info = []
+#
+#
+# def print_menu():
+#     """完成打印功能菜单"""
+#     print("=" * 50)
+#     print("名片管理系统 v1.0")
+#     print("1.添加一个新的片")
+#     print("2.删除一个名片")
+#     print("3.修改一个名片")
+#     print("4.查询一个名片")
+#     print("5.显示所有的名片")
+#     print("6.退出系统")
+#     print("=" * 50)
+#
+#
+# def add_new_card_info():
+#     """完成添加名片"""
+#     new_name = input("请输入新的名字：")
+#     new_qq = input("请输入新的QQ：")
+#     new_weixin = input("请输入新的微信：")
+#     new_addr = input("请输入新的地址：")
+#     new_info = {"name": new_name, "qq": new_qq, "weixin": new_weixin, "addr": new_addr}
+#     # 将一个字典添加到列表中
+#     card_info.append(new_info)
+#     print(card_info)  # [{'name': 'jh', 'qq': '111', 'weixin': '2222', 'addr': '3333333333'}]
+#
+#
+# def find_card_info():
+#     find_name = input("请输入要查找的名字：")
+#     find_flag = 0  # 默认表示没有找到
+#     for temp in card_info:
+#         if find_name == temp["name"]:
+#             print("姓名\tQQ\t微信\t住址")
+#             print("%s\t%s\t%s\t%s" % (temp["name"], temp["qq"], temp["weixin"], temp["addr"]))
+#             find_flag = 1  # 表示找到了
+#             break  # break 可以结束while循环也可以结束for循环
+#         # else:
+#         #     print("查无此人！")
+#         #     # 输出：加上else：明明有aa，却输出查无此人！是因为遍历到bb的时候出现的！说明这样写是不对的！
+#     # 判断是否找到了
+#     if find_flag == 0:
+#         print("查无此人！")
+#
+#
+# def show_all_info():
+#     print("姓名\tQQ\t微信\t住址")
+#     for temp in card_info:
+#         # print(temp)
+#         # 制表
+#         print("%s\t%s\t%s\t%s" % (temp["name"], temp["qq"], temp["weixin"], temp["addr"]))
+#
+#
+# # 选中代码块，按Tab。
+# # 要是想往左移，就按Shift + Tab
+#
+# def main():
+#     """完成整个函数的调用"""
+#     # 打印功能提示
+#     print_menu()
+#     while True:
+#         num = int(input("请输入功能序号："))
+#         if num == 1:
+#             add_new_card_info()
+#         elif num == 2:
+#             pass
+#         elif num == 3:
+#             pass
+#         elif num == 4:
+#             find_card_info()
+#         elif num == 5:
+#             show_all_info()
+#         elif num == 6:
+#             break
+#         else:
+#             print("您的输入有误，请重新输入")
+#         print("")
+#     print("您已经成功退出该系统，欢迎再次使用！")
+#
+#
+# # 调用主函数
+# main()
+
+# 列表、字典当作全局变量
+list = [11, 22, 33]
+dic = {"name": "aaaa", "age": 20}
 
 
-def print_menu():
-    """完成打印功能菜单"""
-    print("=" * 50)
-    print("名片管理系统 v1.0")
-    print("1.添加一个新的片")
-    print("2.删除一个名片")
-    print("3.修改一个名片")
-    print("4.查询一个名片")
-    print("5.显示所有的名片")
-    print("6.退出系统")
-    print("=" * 50)
+def test():
+    print("=============")
+    list.append(44)
+    dic["qq"] = 100
 
 
-def add_new_card_info():
-    """完成添加名片"""
-    new_name = input("请输入新的名字：")
-    new_qq = input("请输入新的QQ：")
-    new_weixin = input("请输入新的微信：")
-    new_addr = input("请输入新的地址：")
-    new_info = {"name": new_name, "qq": new_qq, "weixin": new_weixin, "addr": new_addr}
-    # 将一个字典添加到列表中
-    card_info.append(new_info)
-    print(card_info)  # [{'name': 'jh', 'qq': '111', 'weixin': '2222', 'addr': '3333333333'}]
-
-
-def find_card_info():
-    find_name = input("请输入要查找的名字：")
-    find_flag = 0  # 默认表示没有找到
-    for temp in card_info:
-        if find_name == temp["name"]:
-            print("姓名\tQQ\t微信\t住址")
-            print("%s\t%s\t%s\t%s" % (temp["name"], temp["qq"], temp["weixin"], temp["addr"]))
-            find_flag = 1  # 表示找到了
-            break  # break 可以结束while循环也可以结束for循环
-        # else:
-        #     print("查无此人！")
-        #     # 输出：加上else：明明有aa，却输出查无此人！是因为遍历到bb的时候出现的！说明这样写是不对的！
-    # 判断是否找到了
-    if find_flag == 0:
-        print("查无此人！")
-
-
-def show_all_info():
-    print("姓名\tQQ\t微信\t住址")
-    for temp in card_info:
-        # print(temp)
-        # 制表
-        print("%s\t%s\t%s\t%s" % (temp["name"], temp["qq"], temp["weixin"], temp["addr"]))
-
-
-# 选中代码块，按Tab。
-# 要是想往左移，就按Shift + Tab
-
-def main():
-    """完成整个函数的调用"""
-    # 打印功能提示
-    print_menu()
-    while True:
-        num = int(input("请输入功能序号："))
-        if num == 1:
-            add_new_card_info()
-        elif num == 2:
-            pass
-        elif num == 3:
-            pass
-        elif num == 4:
-            find_card_info()
-        elif num == 5:
-            show_all_info()
-        elif num == 6:
-            break
-        else:
-            print("您的输入有误，请重新输入")
-        print("")
-    print("您已经成功退出该系统，欢迎再次使用！")
-
-
-# 调用主函数
-main()
+test()
+print(list)
+print(dic)
