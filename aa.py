@@ -967,3 +967,21 @@ def test(a, b, c=33, *args, **kwargs):
 
 
 test(1, 2, 3, 4, 5, 6, done=5, task=6)
+
+# 拆包、元组、字典
+print("拆包、元组、字典")
+# *在实参里是拆包，在形参里用来保存一些值
+
+
+def test(a, b, c=33, *args, **kwargs):
+    print(a)
+    print(b)
+    print(c)
+    print(args)  # 输出(4, 5, 6)
+    print(kwargs)  # {'done': 5, 'task': 6}
+
+
+A = (44, 55, 66)
+B = {"name": "aa", "age": 10}
+test(11, 22, 33, A, B)  # ((44, 55, 66), {'name': 'aa', 'age': 10})
+test(11, 22, 33, *A, **B)  # (44, 55, 66) {'name': 'aa', 'age': 10}
