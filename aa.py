@@ -922,8 +922,10 @@ test()
 print(list)
 print(dic)
 
-# 缺省参数——默认参数，重新赋值则不是缺省参数
+# 缺省参数——默认参数，重新赋值则不是缺省参数b=22,c=10
 print("缺省参数")
+
+
 # 实参与形参命名要一致
 
 
@@ -934,4 +936,34 @@ def test(a, b=22, c=10):
 
 test(11, 22)
 test(33, 22)
-test(44, 22, c = 1)
+test(44, 22, c=1)
+
+# 不定长参数1 args名称可以自定义
+print("不定长参数")
+
+
+def sum_2_num(a, b, *args):
+    print(a)
+    print(b)
+    print(args)
+    result = a + b
+    for num in args:
+        result += num
+    print("result = %d" % result)
+
+
+sum_2_num(11, 22, 33, 44, 55, 66)
+sum_2_num(11, 22, 33)
+sum_2_num(11, 22)
+
+
+# 不定长参数2,最复杂的参数
+def test(a, b, c=33, *args, **kwargs):
+    print(a)
+    print(b)
+    print(c)
+    print(args)  # 输出(4, 5, 6)
+    print(kwargs)  # {'done': 5, 'task': 6}
+
+
+test(1, 2, 3, 4, 5, 6, done=5, task=6)
