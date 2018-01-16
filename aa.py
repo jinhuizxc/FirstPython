@@ -921,3 +921,17 @@ def test():
 test()
 print(list)
 print(dic)
+
+# 缺省参数——默认参数，重新赋值则不是缺省参数
+print("缺省参数")
+# 实参与形参命名要一致
+
+
+def test(a, b=22, c=10):
+    result = a + b + c
+    print("结果：%d" % result)
+
+
+test(11, 22)
+test(33, 22)
+test(44, 22, c = 1)
