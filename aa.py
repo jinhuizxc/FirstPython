@@ -1036,5 +1036,70 @@ def test(a, b):
 result1 = test(11, 22)
 print("result1 = %s" % result1)  # result1 = None
 fun = lambda a, b: a + b
-result2 = fun(11,22)
-print("result2 = %s" % result2) # result1 = 33
+result2 = fun(11, 22)
+print("result2 = %s" % result2)  # result1 = 33
+
+# 匿名函数的操作
+num = [11, 22, 33, 123, 1, 2, 3]
+num.sort()  # 从小到大排列
+print(num)
+info = [{"name": "cc", "age": 13}, {"name": "bb", "age": 12}, {"name": "aa", "age": 14}]
+print(info)
+info.sort(key=lambda x: x["name"])
+print(info)
+info.sort(key=lambda x: x["age"])
+print(info)
+
+
+# 匿名函数的应用1
+def test(a, b, func):
+    result = func(a, b)
+    print(result)
+
+
+test(11, 22, lambda x, y: x + y)
+
+# 匿名函数的应用2 python是动态语言
+# def test(a, b, func):
+#     result = func(a, b)
+#     print(result)
+#
+#
+# # 请输入一个匿名函数:lambda x,y:x+y+100     133
+# func_new = input("请输入一个匿名函数:")
+# func_new = eval(func_new)  # 在python2里没错，但是python3不加这句报错：'str' object is not callable
+# test(11, 22, func_new)
+
+# 知识点补充1
+# a = 100是不可变类型，a =[100]是可变类型
+# a = 100
+a = [100]
+
+
+def test(num):
+    num += num
+    # print("num = %d" % num)  # num = 200 4，相当于自己进行修改
+    print(num)  # [100, 100]
+
+
+test(a)
+# print("a = %d" % a) # a = 100
+print(a)  # [100, 100]
+
+# 交换2个变量
+a = 4
+b = 5
+# 交换方式1
+c = 0
+c = a
+a = b
+b = c
+print(a,b)
+# 交换方式2
+a = a + b  # 最前面的a可以用别的字母所代替比如c等
+b = a - b
+a = a - b
+print(a, b)
+# 方式3
+a, b = b, a
+print(a, b)
