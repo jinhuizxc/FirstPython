@@ -1024,3 +1024,17 @@ def getNums(num):
 
 
 print(getNums(5))
+
+
+# ============================================================
+# 匿名函数,可以解决一些简单的计算，复杂的实现不了
+# lambda 参数：式子
+def test(a, b):
+    a + b
+
+
+result1 = test(11, 22)
+print("result1 = %s" % result1)  # result1 = None
+fun = lambda a, b: a + b
+result2 = fun(11,22)
+print("result2 = %s" % result2) # result1 = 33
