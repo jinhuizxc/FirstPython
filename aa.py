@@ -1004,3 +1004,23 @@ info = {"name": "aa", 3.14: "bb", (11, 22): "cc"}
 # infos = {"name": "aa", 3.14: "bb", (11, 22): "cc", [1, 2]: "dd"}
 print(info)  # 哈希算法， 可变类型不允许当作key值
 # print(infos)  # TypeError: unhashable type: 'list'
+
+# 递归 5！= 4*3*2*1
+i = 1
+result = 1
+while i <= 4:
+    result = result * i
+    i += 1
+print(result)
+
+
+# 5！ = 5*4！ 函数自身调用自己——递归
+# 计算4的阶乘！
+def getNums(num):
+    if num > 1:
+        return num * getNums(num - 1)
+    else:
+        return num
+
+
+print(getNums(5))
