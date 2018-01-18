@@ -273,9 +273,11 @@ print(name[-2])
 print(name[len(name) - 1])
 
 # 切片、字符串逆序
-name = "asdfghjkl"
-print(name[2:5])
-print(name[2:-1])
+print("切片、字符串逆序")
+name = "asdfglhjkl"
+print(name[2:5])  # dfg
+print(name[4:])  # ghjkl
+print(name[2:-1])  # dfghjk
 print(name[2:])  # 冒号后不写默认取到最后一个字符
 print(name[2:-1:2])  # :2表示间隔是2
 print(name[0:])
@@ -1124,16 +1126,16 @@ print(a)  # [100]
 # 字符串常见操作
 print("字符串常见操作")
 str = "hello world and hello"
-print(str.find("a"))  # 找不到下标是-1
-print(str.find("world"))  # 找到下标是6
-# print(str.index("a"))  # 找不到程序崩溃：ValueError: substring not found
+print(str.find("a"))  # 12 找不到下标是-1
+print(str.find("world"))  # 6 找到下标是6
+# print(str.index("a"))    # 6 找不到程序崩溃：ValueError: substring not found
 print(str.index("world"))
-# rfind
+# rfind,从右边开始找，但是下标还是从左到右数
 print("------rfind------")
-print(str.rfind("a"))
-print(str.rfind("world"))
-print(str.rfind("hello"))  # 右边的hello
-print(str.rindex("hello"))
+print(str.rfind("a"))  # 12
+print(str.rfind("world"))  # 6
+print(str.rfind("hello"))  # 16 右边的hello
+print(str.rindex("hello"))  # 16
 # print(str.rindex("ab"))  # 没有结果。。。不输出,但后面代码的不输出
 # count
 print("count")
@@ -1246,17 +1248,40 @@ f.close()
 
 # 制作文件的备份
 # 1.获取要复制的文件名
-old_file_name = input("请输入要复制的文件名(需要后缀):")
-# 2.打开要复制的文件
-f_read = open(old_file_name, "r")
-# 3.创建一个新的文件
-# new_file_name = "[复件]" + old_file_name
-position= old_file_name.rfind(".")
-new_file_name = old_file_name[0:position] + "[复件]" + old_file_name[position:]
-f_write = open(new_file_name, "w")
-# 4.从old文件中，读取数据，写入到new文件中
-content = f_read.read()
-f_write.write(content)
-# 5.关闭2个文件
-f_read.close()
-f_write.close()
+# old_file_name = input("请输入要复制的文件名(需要后缀):")
+# # 2.打开要复制的文件
+# f_read = open(old_file_name, "r")
+# # 3.创建一个新的文件
+# # new_file_name = "[复件]" + old_file_name
+# position = old_file_name.rfind(".")
+# print(position)  # 4
+# new_file_name = old_file_name[0:position] + "[复件]" + old_file_name[position:]
+# f_write = open(new_file_name, "w")
+# # 4.从old文件中，读取数据，写入到new文件中
+# content = f_read.read()
+# f_write.write(content)
+# # 5.关闭2个文件
+# f_read.close()
+# f_write.close()
+
+# 读取文件的另外2种方式readlines ,
+# 可以按照行的方式把整个文件中的内容进行一次性读取，并且返回的是一个列表，其中每一行的数据为一个元素
+
+# 读数据 readlines
+# f_w = open("test.txt", "w")
+# i = 1
+# while i <= 5:
+#     f_w.write("hello world i'm here!")
+#     i += 1
+# f_w.close()
+print("readlines")
+f_r = open('test.txt', 'r')
+content = f_r.readlines()
+print(type(content))
+print(content)
+i = 1
+for temp in content:
+    print("%d:%s" % (i, temp))
+    i += 1
+
+f_r.close()
