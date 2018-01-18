@@ -1094,7 +1094,7 @@ c = 0
 c = a
 a = b
 b = c
-print(a,b)
+print(a, b)
 # 交换方式2
 a = a + b  # 最前面的a可以用别的字母所代替比如c等
 b = a - b
@@ -1103,3 +1103,109 @@ print(a, b)
 # 方式3
 a, b = b, a
 print(a, b)
+
+# 知识补充2
+print("知识补充2")
+
+# a = 100
+a = [100]
+
+
+def test(num):
+    num = num + num  # 理解： num+=num--->num=num+num----->[100]+[100]----->[100,100]
+    # c、c++对于这样的计算是一样的，
+    # python是+=：直接修改值，xx+xx是开辟一块新内存，所以a不变，输出[100]
+    print(num)  # [100, 100]
+
+
+test(a)
+print(a)  # [100]
+
+# 字符串常见操作
+print("字符串常见操作")
+str = "hello world and hello"
+print(str.find("a"))  # 找不到下标是-1
+print(str.find("world"))  # 找到下标是6
+# print(str.index("a"))  # 找不到程序崩溃：ValueError: substring not found
+print(str.index("world"))
+# rfind
+print("------rfind------")
+print(str.rfind("a"))
+print(str.rfind("world"))
+print(str.rfind("hello"))  # 右边的hello
+print(str.rindex("hello"))
+# print(str.rindex("ab"))  # 没有结果。。。不输出,但后面代码的不输出
+# count
+print("count")
+print(str.count("hello"))
+print(str.count("ab"))  # 0
+# replace
+print("replace")
+print(str.replace("world", "WORLD"))
+print(str)  # 仅仅是替换，但是没有改变str的值
+print(str.replace("hello", "xxx"))  # xxx world and xxx
+print(str.replace("hello", "xxx", 1))  # xxx world and hello
+# split
+print("split")
+print(str.split(" "))  # ['hello', 'world', 'and', 'hello']
+# capitalize 把第一个字母变成大写
+print("capitalize")
+print(str.capitalize())  # Hello world and hello
+# title 所有字符首字母大写
+print("title")
+print(str.title())  # Hello World And Hello
+# startswith、endswith 以该字母开头、结尾
+print(str.startswith("abc"))  # False
+print(str.startswith("h"))  # True
+print(str.endswith("o"))  # True
+print(str.endswith("p"))  # False
+
+# lower、upper将字符串全变成大写或小写
+file_name = "xxx.Txt"
+print(file_name.upper())  # XXX.TXT
+print(file_name.lower())  # xxx.txt
+
+# ljust: 返回一个原字符串左对齐，并使用空格填充至长度width的新字符串
+# rjust: 返回一个原字符串右对齐，并使用空格填充至长度width的新字符串
+# center: 返回一个原字符串居中,并使用空格填充至长度 width 的新字符串。默认填充字符为空格
+lyric = "    想带你一起看大海    "
+print(lyric.ljust(50))  # 输出：想带你一起看大海
+print(lyric.center(50))  # 输出：                     想带你一起看大海
+print(lyric.rjust(50))  # 输出：                                          想带你一起看大海
+# lstrip 删除左边的空白字符
+# rstrip 删除右边的空白字符
+print("strip")
+print(lyric.lstrip())
+print(lyric.rstrip())
+print(lyric.strip())
+# partition: 把字符以xx分割成三部分，xx前，xx和xx后
+mystr = "aa bb cc dd "
+print(mystr.partition("bb"))  # ('aa ', 'bb', ' cc dd ')
+print(mystr.rpartition("cc"))  # ('aa bb ', 'cc', ' dd ')
+# splitlines：按照行分隔，返回一个包含各行作为元素的列表
+str = "hello\nworld"
+print(str)
+print(str.splitlines())
+# isalpha：如果所有字符都是字母，返回true，否则返回false
+# isdigit:是否是纯数字，返回true，否则返回false
+# isalnum: 所有字符都是字母或数字，返回true，否则返回false
+print(str.isalpha())
+b = "123"
+print(b.isdigit())
+c = "123abc"
+print(c.isalnum())
+# isspace：如果字符串中只包含空格，返回true，否则返回false
+print("isspace")
+d = ""
+print(d.isspace())
+d = " "
+print(d.isspace())
+# join:把每个字符后面插入str，构造出一个新的字符串
+str = "_"
+li = ["my", "name", "is", "aa"]
+print(str.join(li))
+
+# 切割字符
+content = "asdas sadasd  dfsf  \t\t\t j sd a lk "
+print(content.split())  # ['asdas', 'sadasd', 'dfsf', 'j', 'sd', 'a', 'lk']
+
