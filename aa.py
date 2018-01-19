@@ -1258,30 +1258,50 @@ f.close()
 # new_file_name = old_file_name[0:position] + "[复件]" + old_file_name[position:]
 # f_write = open(new_file_name, "w")
 # # 4.从old文件中，读取数据，写入到new文件中
-# content = f_read.read()
-# f_write.write(content)
+# # 这里文件如果太大会崩，因为他是一次性全读的，所有要做多次读取处理！
+# # content = f_read.read()
+# # f_write.write(content)
+# while True:
+#     content = f_read.read(1024)
+#     # 判断什么时候退出，重要！
+#     if len(content) == 0:
+#         break
+#     f_write.write(content)
+#
 # # 5.关闭2个文件
 # f_read.close()
 # f_write.close()
 
-# 读取文件的另外2种方式readlines ,
+# 读取文件的另外2种方式readlines、readline,以及注意点
 # 可以按照行的方式把整个文件中的内容进行一次性读取，并且返回的是一个列表，其中每一行的数据为一个元素
 
 # 读数据 readlines
+print("readlines")
 # f_w = open("test.txt", "w")
 # i = 1
 # while i <= 5:
 #     f_w.write("hello world i'm here!")
 #     i += 1
 # f_w.close()
-print("readlines")
+
 f_r = open('test.txt', 'r')
 content = f_r.readlines()
 print(type(content))
+# readlines
 print(content)
+# readline
+print("readline")
+f = open("test.txt")
+content1 = f.readline() # hello world i'm here!
+print(content1)
+# content1 = f.readline(1) # h
+content1 = f.readline() # hello world i'm here!!
+print(content1)
 i = 1
 for temp in content:
     print("%d:%s" % (i, temp))
     i += 1
 
 f_r.close()
+
+
